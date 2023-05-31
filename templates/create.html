@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規タスク作成</title>
+</head>
+<body>
+    <h2>新規タスク作成</h2>
+    <form action="/create" method="POST">
+        <label for="title">タイトル:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="detail">詳細:</label>
+        <textarea id="detail" name="detail" required></textarea><br><br>
+
+
+        <input type="submit" value="追加">
+    </form>
+</body>
+</html>

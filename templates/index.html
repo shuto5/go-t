@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TODOアプリ</title>
+</head>
+<body>
+    <h1>TODOアプリ</h1>
+
+    <form action="/create" method="GET">
+        <input type="submit" value="新規タスク作成">
+    </form>
+
+    <h2>タスク一覧</h2>
+    <table>
+        <tr>
+            <th>タイトル</th>
+            <th>詳細</th>
+        </tr>
+        {{range .}}
+        <tr>
+            <td><a href="/detail?id={{.Id}}">{{.Title}}</a></td>
+            <td><a href="/edit?id={{.Id }}">編集</a></td>
+            <td><a href="/delete?id={{.Id }}">削除</a><td></td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+</html>

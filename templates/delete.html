@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOアプリ  -  削除画面</title>
+</head>
+<body>
+    <h1>TODOアプリ  -  削除画面</h1>
+    <h2>以下のタスクを削除しますか？</h2>
+    <p>タイトル: {{.Title}}</p>
+    <p>詳細: {{.Detail}}</p>
+
+    <form action="/delete" method="POST">
+        <input type="hidden" name="id" value="{{.Id}}">
+        <input type="submit" value="はい">
+    </form>
+
+    <a href="/">トップに戻る</a>
+</body>
+</html>
